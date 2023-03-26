@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#container {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+    padding: 20px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 200px;
+    width: 95%;
+    max-width: 400px;
+    border: 1px solid gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form>label {
+    margin-bottom: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+form>input {
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: all 0.3s ease-in;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form>input:focus::placeholder {
+    color: white;
+}
+
+form>input:focus {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+form>button {
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #96b656;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+}
+
+form>button:hover {
+    background-color: #5e880b;
+    color: white;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    width: 95%;
+    max-width: 600px;
+    border: 1px solid gray;
+    padding: 20px 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header>img {
+    width: 120px;
+    margin-right: 40px;
+}
+
+.sub-header>p {
+    margin-bottom: 15px;
+}
+
+.repos>p {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.info>button,
+.search-another {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+}
+
+.info>button:hover,
+.search-another:hover {
+    background-color: rgba(158, 0, 0, 0.658);
+}
+
+h3 {
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
 }
